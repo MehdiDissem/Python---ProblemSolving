@@ -17,13 +17,13 @@ def start_game():
        f'Hi, {player_name}, would you like to play the guessing game?'
        '(Enter Yes/No): ')
 
-    if wanna_play.lower() != 'yes':
+    if wanna_play.lower() != 'yes' or wanna_play.lower() != 'y':
       print('That\'s cool, Thanks!')
       exit()
     else:
        show_score()
 
-    while wanna_play.lower() == 'yes':
+    while wanna_play.lower() == 'yes' or wanna_play.lower()=='y':
        try:
            guess = int(input('Pick a number between 1 and 10: '))
            if guess < 1 or guess > 10:
@@ -38,7 +38,7 @@ def start_game():
                print(f'It took you {attempts} attempts')
                wanna_play = input(
                    'Would you like to play again? (Enter Yes/No): ')
-               if wanna_play.lower() != 'yes':
+               if wanna_play.lower() != 'yes' or wanna_play.lower() !='y':
                    print('That\'s cool, have a good one!')
                    break
                else:
